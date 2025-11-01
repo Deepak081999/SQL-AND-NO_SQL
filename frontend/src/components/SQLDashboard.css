@@ -1,0 +1,195 @@
+/* ---------- MAIN DASHBOARD CONTAINER ---------- */
+.sql-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+}
+
+/* ---------- ROW (GRID LAYOUT 2:6:4) ---------- */
+.row {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* ---------- COLUMN BASE STYLE ---------- */
+.col {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+
+/* ---------- RESPONSIVE COLUMN CLASSES (Optional Bootstrap-like) ---------- */
+.col-md-2 {
+    grid-column: span 1;
+    flex: 0 0 16.66%;
+}
+
+.col-md-6 {
+    grid-column: span 1;
+    flex: 0 0 50%;
+}
+
+.col-md-4 {
+    grid-column: span 1;
+    flex: 0 0 33.33%;
+}
+
+/* ---------- LEFT PANEL ---------- */
+.left-panel {
+    background-color: #f9fbff;
+}
+
+.table-section h4 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.table-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.table-section li {
+    font-size: 13px;
+    background: #eef3ff;
+    margin: 3px 0;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+/* ---------- MIDDLE PANEL ---------- */
+.middle-panel textarea {
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+.middle-panel button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.middle-panel button:disabled {
+    background-color: #a4c2f4;
+}
+
+/* ---------- RIGHT PANEL ---------- */
+.preview-table {
+    margin-bottom: 20px;
+}
+
+.preview-table h4 {
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f6fc;
+}
+
+/* ---------- OUTPUT SECTION ---------- */
+.output-section {
+    margin-top: 50px;
+    background: #ffffff;
+    /* border-top: 2px solid #007bff; */
+    padding: 15px 20px;
+    height: 40vh;
+    overflow-y: auto;
+}
+
+.output-section table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 900px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- COMMON QUERY SECTION ---------- */
+.common-queries {
+    padding: 20px;
+    background: #f4f7fb;
+    border-top: 2px solid #007bff;
+}
+
+.common-queries h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.query-block {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.query-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.query-header button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.query-header button:hover {
+    background: #0056b3;
+}
+
+pre {
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    overflow-x: auto;
+}

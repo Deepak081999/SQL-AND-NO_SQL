@@ -1,0 +1,27 @@
+/* ----- GLOBAL BODY ----- */
+body {
+  margin: 0;
+  background: #f5f7fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ----- MAIN APP WRAPPER ----- */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----- CONTENT AREA ----- */
+.app-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1400px;
+  /* fits 3-column SQL layout */
+  margin: 0 auto;
+}
+
+.app-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
